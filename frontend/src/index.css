@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system « bleu sobre » : neutres froids, un seul accent bleu, barre latérale marine. */
+@layer base {
+  :root {
+    --background: 214 33% 97%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --muted: 214 30% 94%;
+    --muted-foreground: 215 16% 42%;
+    --border: 214 24% 90%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --success: 152 62% 30%;
+    --warning: 28 90% 38%;
+    --ring: 221 83% 53%;
+    --sidebar: 222 47% 11%;
+    --sidebar-foreground: 215 20% 72%;
+    --sidebar-border: 222 30% 18%;
+  }
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 214 32% 94%;
+    --card: 222 40% 9.5%;
+    --muted: 222 30% 14%;
+    --muted-foreground: 215 16% 66%;
+    --border: 222 26% 18%;
+    --primary: 217 91% 62%;
+    --primary-foreground: 222 47% 8%;
+    --destructive: 0 72% 60%;
+    --success: 152 55% 52%;
+    --warning: 38 92% 58%;
+    --ring: 217 91% 62%;
+    --sidebar: 222 47% 5%;
+    --sidebar-foreground: 215 20% 70%;
+    --sidebar-border: 222 30% 13%;
+  }
+  * { @apply border-border; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { @apply bg-background text-foreground antialiased; font-feature-settings: "cv11", "ss01"; }
+  ::selection { background: hsl(var(--primary) / 0.2); }
+}
+
+@layer utilities {
+  /* Motif discret du panneau de marque (page de connexion) */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+}

@@ -1,0 +1,8 @@
+-r base.txt
+pytest
+pytest-django
+pytest-cov
+factory-boy
+ruff
+pre-commit
+pytest-repeat
